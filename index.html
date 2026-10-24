@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AeroSearch</title>
+  <link rel="icon" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="logo.png" alt="logo" class="logo">
+      <h1>AeroSearch</h1>
+      <p>Selamat Datang di AeroSearch, apa yang bisa kami bantu ?</p>
+    </header>
+
+    <div class="search-box">
+      <input type="text" id="input" placeholder="Ketik kata yang ingin anda cari" onkeyup="cari()">
+      <button onclick="cari()">Cari</button>
+    </div>
+
+    <div id="saran" class="saran"></div>
+    <div id="hasil" class="hasil"></div>
+  </div>
+  <!-- Tombol ganti tema -->
+  <div class="pengaturan-tema">
+    <button type="button" id="tombolTema" onclick="toggleTema()">
+      🌙 Mode Gelap</button>
+  </div>
+
+  <!-- Pencarian populer -->
+  <div class="pencarian-populer">
+    <p>Pencarian populer</p>
+
+    <button type="button" onclick="pilihSaran('Algoritma')">
+      Algoritma</button>
+
+    <button type="button" onclick="pilihSaran('Hardware')">
+      Hardware</button>
+
+    <button type="button" onclick="pilihSaran('Software')">
+      Software</button>
+
+    <button type="button" onclick="pilihSaran('Flowchart')">
+      Flowchart</button>
+</div>
+
+  <script src="database.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
